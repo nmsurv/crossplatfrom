@@ -1,5 +1,5 @@
-    package com.kfu.crossplatform.enums;
+package com.kfu.crossplatform.enums;
 
-    public enum TokenType {
-        ACCESS, REFRESH
-    }
+public enum TokenType {
+    ACCESS, REFRESH
+}
