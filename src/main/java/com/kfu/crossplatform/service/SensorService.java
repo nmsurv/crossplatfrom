@@ -50,7 +50,7 @@ public class SensorService {
         return sensorRepository.findById(id).map(sensor -> {
             sensor.setModel(sensorDetails.getModel());
             sensor.setLocation(sensorDetails.getLocation());
-            // sensor.setAssingnedTo(sensorDetails.getAssingnedTo());
+            sensor.setAssingnedTo(sensorDetails.getAssingnedTo());
             return sensorRepository.save(sensor);
         });
     }

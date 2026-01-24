@@ -38,8 +38,8 @@ public class Sensor {
     @NotBlank(message = "local cannot be blank")
     private String location;
 
-    // @NotNull(message = "user is required")
-    // @ManyToOne(fetch = FetchType.EAGER)
-    // @JoinColumn(name = "user_id")
-    // private User assingnedTo;
+    @NotNull(message = "user is required")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User assingnedTo;
 }

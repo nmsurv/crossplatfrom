@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: "crossplatform"
+    version: "0.1"
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/crossplatform
+    username: postgres
+    password: weload
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+  
+jwt:
+    secret: 66f65f5f97904ad05148f5a25c3f24adabf0d0f9b7c5ad09344393a55b8deeef
+    access:
+        duration:
+            minutes: 5
+            seconds: 300
+        cookie-name: access-token
+    refresh:
+        duration:
+            days: 7
+            seconds: 604800
+        cookie-name: refresh-token
