@@ -1,47 +1,72 @@
 package com.kfu.crossplatform.service;
 
-import com.kfu.crossplatform.domain.Sensor;
-import com.kfu.crossplatform.repository.SensorRepository;
-import lombok.RequiredArgsConstructor;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.kfu.crossplatform.domain.Sensor;
+import com.kfu.crossplatform.repository.SensorRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
-@RequiredArgsConstructor
 public class SensorService {
 
     private final SensorRepository sensorRepository;
 
-    // CREATE
-    public Sensor create(Sensor sensor) {
-        sensor.setId(null); // БД сама сгенерирует id
-        return sensorRepository.save(sensor);
+    public SensorService(SensorRepository sensorRepository){
+        this.sensorRepository = sensorRepository;
     }
 
-    // READ ALL
-    public List<Sensor> findAll() {
+    @Cacheable("sensors")
+    public List<Sensor> getAll(){
         return sensorRepository.findAll();
     }
 
-    // READ BY ID
-    public Sensor findById(Long id) {
-        return sensorRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Sensor id = " + id + " не найден."));
+    public List<Sensor> getAllByModel(String model){
+        return sensorRepository.findAllByModel(model);
     }
 
-    // UPDATE
-    public Sensor update(Long id, Sensor newSensor) {
-        Sensor existing = findById(id);
-
-        existing.setModel(newSensor.getModel());
-        existing.setLocation(newSensor.getLocation());
-
-        return sensorRepository.save(existing);
+    @Cacheable(value = "sensor", key = "#id")
+    public Optional<Sensor> getById(Long id){
+        return sensorRepository.findById(id);
     }
 
-    // DELETE
-    public void delete(Long id) {
-        sensorRepository.deleteById(id);
+    @Transactional
+    @CacheEvict(value = "sensor", allEntries = true)
+    public Sensor create(Sensor sensor){
+        return sensorRepository.save(sensor);
+    }
+
+    @Transactional
+    @CacheEvict(value = "sensor", key ="#id", allEntries = true)
+    public Optional<Sensor> update(Long id, Sensor sensorDetails){
+        return sensorRepository.findById(id).map(sensor -> {
+            sensor.setModel(sensorDetails.getModel());
+            sensor.setLocation(sensorDetails.getLocation());
+            // sensor.setAssingnedTo(sensorDetails.getAssingnedTo());
+            return sensorRepository.save(sensor);
+        });
+    }
+
+    @Transactional
+    @CacheEvict(value = "sensor", key="#id", allEntries = true)
+    public boolean deleteById(Long id){
+        if(sensorRepository.existsById(id)) {
+            sensorRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+
+    public Page<Sensor> getAllPaged(int page, int size){
+        Pageable pageable = PageRequest.of(page, size);
+        return sensorRepository.findAll(pageable);
     }
 }

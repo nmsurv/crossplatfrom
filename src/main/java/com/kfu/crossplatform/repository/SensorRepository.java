@@ -1,7 +1,16 @@
 package com.kfu.crossplatform.repository;
 
-import com.kfu.crossplatform.domain.Sensor;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-public interface SensorRepository extends JpaRepository<Sensor, Long> {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.kfu.crossplatform.domain.Sensor;
+
+@Repository
+public interface SensorRepository extends
+    JpaRepository<Sensor, Long>{
+    List<Sensor> findByModelStartingWithIgnoreCase(String model);
+    List<Sensor> findAllByModel(String model);
 }
+    
