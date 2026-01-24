@@ -44,6 +44,8 @@ public class SecurityConfig {
         http.authorizeHttpRequests(auth -> {
             auth.requestMatchers(ALLOWED_URLS).permitAll();
             auth.requestMatchers("/api/auth/login", "/api/auth/refresh").permitAll();
+            auth.requestMatchers("/api/auth/logout", "/api/auth/info").authenticated();
+            auth.requestMatchers("/api/sensors/**").authenticated();
             auth.anyRequest().authenticated();
         });
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));

@@ -41,7 +41,8 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             }
         }
 
-        if (token == "" || !jwtTokenProvider.isValid(token)) {
+        if (token.isEmpty() || !jwtTokenProvider.isValid(token)) {
+            logger.debug("Token missing or invalid, continuing without auth");
             filterChain.doFilter(request, response);
             return;
         }

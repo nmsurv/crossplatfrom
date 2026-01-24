@@ -36,3 +36,9 @@ jwt:
             days: 7
             seconds: 604800
         cookie-name: refresh-token
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    com.kfu.crossplatform: DEBUG

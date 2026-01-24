@@ -1,13 +1,5 @@
 package com.kfu.crossplatform.domain;
 
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Set;
-
-import javax.swing.event.DocumentEvent.EventType;
-import org.springframework.cglib.core.Local;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

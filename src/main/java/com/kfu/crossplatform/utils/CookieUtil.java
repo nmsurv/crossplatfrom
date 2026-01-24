@@ -13,22 +13,18 @@ public class CookieUtil {
     private String refreshTokenCookieName;
 
     public HttpCookie createAccessCookie(String value, long duration) {
-        return ResponseCookie.from(accessTokenCookieName, value).maxAge(duration).httpOnly(true).secure(true).path("/")
-                .sameSite("None").build();
+        return ResponseCookie.from(accessTokenCookieName, value).maxAge(duration).httpOnly(true).path("/").build();
     }
 
     public HttpCookie deleteAccessCookie(){
-        return ResponseCookie.from(accessTokenCookieName, "").maxAge(0).httpOnly(true).secure(true).path("/")
-                .sameSite("None").build();
+        return ResponseCookie.from(accessTokenCookieName, "").maxAge(0).httpOnly(true).path("/").build();
     }
 
     public HttpCookie createRefreshCookie(String value, long duration) {
-        return ResponseCookie.from(refreshTokenCookieName, value).maxAge(duration).httpOnly(true).secure(true).path("/")
-                .sameSite("None").build();
+        return ResponseCookie.from(refreshTokenCookieName, value).maxAge(duration).httpOnly(true).path("/").build();
     }
 
     public HttpCookie deleteRefreshCookie() {
-        return ResponseCookie.from(refreshTokenCookieName, "").maxAge(0).httpOnly(true).secure(true).path("/")
-                .sameSite("None").build();
+        return ResponseCookie.from(refreshTokenCookieName, "").maxAge(0).httpOnly(true).path("/").build();
     }
 }

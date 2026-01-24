@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.beans.factory.annotation.Value;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.security.Key;
 import java.util.Base64;
@@ -27,6 +29,7 @@ import com.kfu.crossplatform.repository.TokenRepository;
 @RequiredArgsConstructor
 @Service
 public class JwtTokenProvider {
+    private static final Logger logger = LoggerFactory.getLogger(JwtTokenProvider.class);
     
     @Value("${jwt.secret}")
     private String key;
@@ -35,10 +38,13 @@ public class JwtTokenProvider {
 
     private boolean isDisabled(String value) {
         Token token = tokenRepository.findByValue(value).orElse(null);
-
-        if(token == null)
+        if(token == null) {
+            logger.debug("Token not found in database");
             return true;
-        return token.isDisabled();
+        }
+        boolean disabled = token.isDisabled();
+        logger.debug("Token found in DB, disabled={}", disabled);
+        return disabled;
     }
     private Date toDate(LocalDateTime time) {
             return Date.from(time.toInstant(ZoneOffset.UTC));
@@ -69,13 +75,19 @@ public class JwtTokenProvider {
     }
 
     public boolean isValid(String token){
-        if(token == null)
+        if(token == null) {
+            logger.debug("Token is null");
             return false;
+        }
         try{
             Jwts.parserBuilder().setSigningKey(decodeSecretKey(key)).build().parseClaimsJws(token);
-            return !isDisabled(token);
+            logger.debug("JWT signature valid, checking if disabled");
+            boolean valid = !isDisabled(token);
+            logger.debug("Token valid={}", valid);
+            return valid;
         }
         catch(JwtException e){
+            logger.debug("JWT parsing failed: {}", e.getMessage());
             return false;
         }
     }
