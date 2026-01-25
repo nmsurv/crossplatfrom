@@ -11,7 +11,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.kfu.crossplatform.domain.Sensor;
+import com.kfu.crossplatform.domain.User;
+import com.kfu.crossplatform.dto.CreateSensorRequest;
+import com.kfu.crossplatform.dto.UpdateSensorRequest;
+import com.kfu.crossplatform.exeptions.ResourceNotFoundException;
 import com.kfu.crossplatform.repository.SensorRepository;
+import com.kfu.crossplatform.repository.UserRepository;
 
 import jakarta.transaction.Transactional;
 
@@ -19,9 +24,11 @@ import jakarta.transaction.Transactional;
 public class SensorService {
 
     private final SensorRepository sensorRepository;
+    private final UserRepository userRepository;
 
-    public SensorService(SensorRepository sensorRepository){
+    public SensorService(SensorRepository sensorRepository, UserRepository userRepository){
         this.sensorRepository = sensorRepository;
+        this.userRepository = userRepository;
     }
 
     @Cacheable("sensors")
@@ -40,17 +47,27 @@ public class SensorService {
 
     @Transactional
     @CacheEvict(value = "sensor", allEntries = true)
-    public Sensor create(Sensor sensor){
+    public Sensor create(CreateSensorRequest request){
+        User user = userRepository.findById(request.getAssignedToId())
+            .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + request.getAssignedToId()));
+        
+        Sensor sensor = new Sensor();
+        sensor.setModel(request.getModel());
+        sensor.setLocation(request.getLocation());
+        sensor.setAssingnedTo(user);
         return sensorRepository.save(sensor);
     }
 
     @Transactional
     @CacheEvict(value = "sensor", key ="#id", allEntries = true)
-    public Optional<Sensor> update(Long id, Sensor sensorDetails){
+    public Optional<Sensor> update(Long id, UpdateSensorRequest request){
         return sensorRepository.findById(id).map(sensor -> {
-            sensor.setModel(sensorDetails.getModel());
-            sensor.setLocation(sensorDetails.getLocation());
-            sensor.setAssingnedTo(sensorDetails.getAssingnedTo());
+            User user = userRepository.findById(request.getAssignedToId())
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + request.getAssignedToId()));
+            
+            sensor.setModel(request.getModel());
+            sensor.setLocation(request.getLocation());
+            sensor.setAssingnedTo(user);
             return sensorRepository.save(sensor);
         });
     }

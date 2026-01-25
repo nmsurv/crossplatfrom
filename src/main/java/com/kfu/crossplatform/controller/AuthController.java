@@ -44,10 +44,4 @@ public class AuthController {
         return ResponseEntity.ok(authenticationService.info());
     }
 
-    /* 
-    @PathMapping("/changePassword")
-    public ResponseEntity<LoginResponse> changePassword(ChangePasswordRequest request) {
-        return authenticationService.changePassword(request);
-    }
-    */
 }
