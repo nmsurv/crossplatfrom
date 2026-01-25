@@ -3,12 +3,14 @@ package com.kfu.crossplatform.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kfu.crossplatform.domain.Alert;
+import com.kfu.crossplatform.dto.AlertDTO;
+import com.kfu.crossplatform.dto.CreateAlertRequest;
+import com.kfu.crossplatform.dto.UpdateAlertRequest;
 import com.kfu.crossplatform.service.AlertService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,6 +22,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+
 
 
 @RestController
@@ -29,28 +34,28 @@ public class AlertController {
      private final AlertService alertService;
 
      @GetMapping("/alerts")
-    public Page<Alert> getAllAlerts(
+    public List<AlertDTO> getAllAlerts(
         @RequestParam(defaultValue = "0") int page,
         @RequestParam(defaultValue = "10") int size) {
-            return alertService.getAllPaged(page, size);
+            return alertService.getAllPagedDTO(page, size);
     }
 
     @GetMapping("/alerts/{id}")
-    public ResponseEntity<Alert> getAlertById(@PathVariable Long id) {
-        return alertService.getById(id)
+    public ResponseEntity<AlertDTO> getAlertById(@PathVariable Long id) {
+        return alertService.getByIdDTO(id)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
     
     @PostMapping("/alerts")
-    public ResponseEntity<Alert> createAlert(@Valid @RequestBody Alert alert) {
-        Alert created = alertService.create(alert);
+    public ResponseEntity<AlertDTO> createAlert(@Valid @RequestBody CreateAlertRequest request) {
+        AlertDTO created = alertService.create(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
     
     @PutMapping("/alerts/{id}")
-    public ResponseEntity<Alert> updateAlert(@PathVariable Long id, @RequestBody Alert alert){
-        return alertService.update(id, alert)
+    public ResponseEntity<AlertDTO> updateAlert(@PathVariable Long id, @RequestBody UpdateAlertRequest request){
+        return alertService.update(id, request)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
