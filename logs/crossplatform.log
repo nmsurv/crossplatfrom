@@ -1,0 +1,455 @@
+2026-01-25 18:03:33 - c.k.c.CrossplatformApplication - INFO - Starting CrossplatformApplication v0.1 using Java 21.0.8 with PID 11228 (C:\Users\user\projects\crossplatform\target\classes started by user in C:\Users\user\projects\crossplatform)
+2026-01-25 18:03:33 - c.k.c.CrossplatformApplication - DEBUG - Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-01-25 18:03:33 - c.k.c.CrossplatformApplication - INFO - The following 1 profile is active: "dev"
+2026-01-25 18:03:34 - o.a.catalina.core.StandardService - INFO - Starting service [Tomcat]
+2026-01-25 18:03:34 - o.a.catalina.core.StandardEngine - INFO - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-25 18:03:34 - o.a.c.c.C.[.[localhost].[/] - INFO - Initializing Spring embedded WebApplicationContext
+2026-01-25 18:03:34 - o.h.jpa.internal.util.LogHelper - INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-25 18:03:34 - o.h.c.i.RegionFactoryInitiator - INFO - HHH000026: Second-level cache disabled
+2026-01-25 18:03:34 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-58 - Starting...
+2026-01-25 18:03:34 - com.zaxxer.hikari.pool.HikariPool - INFO - HikariPool-58 - Added connection org.postgresql.jdbc.PgConnection@367e9cbb
+2026-01-25 18:03:34 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-58 - Start completed.
+2026-01-25 18:03:34 - org.hibernate.orm.deprecation - WARN - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-25 18:03:34 - o.hibernate.orm.connections.pooling - INFO - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-58)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-25 18:03:34 - o.h.e.t.j.p.i.JtaPlatformInitiator - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-25 18:03:36 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-01-25 18:03:36 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-25 18:03:36 - c.k.c.CrossplatformApplication - INFO - Started CrossplatformApplication in 3.118 seconds (process running for 16292.235)
+2026-01-25 18:06:18 - o.a.c.c.C.[.[localhost].[/] - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-25 18:06:18 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Token missing or invalid, continuing without auth
+2026-01-25 18:06:18 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:06:18 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:06:18 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:06:18 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:06:44 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:06:44 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:06:44 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:07:22 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:07:22 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:07:22 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:07:37 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:07:37 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:07:37 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:08:38 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Token missing or invalid, continuing without auth
+2026-01-25 18:08:52 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Token missing or invalid, continuing without auth
+2026-01-25 18:08:53 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:08:53 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:09:08 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:09:08 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:09:08 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:09:36 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-58 - Shutdown initiated...
+2026-01-25 18:09:36 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-58 - Shutdown completed.
+2026-01-25 18:10:15 - c.k.c.CrossplatformApplication - INFO - Starting CrossplatformApplication v0.1 using Java 21.0.8 with PID 20252 (C:\Users\user\projects\crossplatform\target\classes started by user in C:\Users\user\projects\crossplatform)
+2026-01-25 18:10:15 - c.k.c.CrossplatformApplication - DEBUG - Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-01-25 18:10:15 - c.k.c.CrossplatformApplication - INFO - The following 1 profile is active: "dev"
+2026-01-25 18:10:17 - o.a.catalina.core.StandardService - INFO - Starting service [Tomcat]
+2026-01-25 18:10:17 - o.a.catalina.core.StandardEngine - INFO - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-25 18:10:17 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring embedded WebApplicationContext
+2026-01-25 18:10:17 - o.h.jpa.internal.util.LogHelper - INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-25 18:10:17 - org.hibernate.Version - INFO - HHH000412: Hibernate ORM core version 6.6.41.Final
+2026-01-25 18:10:17 - o.h.c.i.RegionFactoryInitiator - INFO - HHH000026: Second-level cache disabled
+2026-01-25 18:10:18 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-1 - Starting...
+2026-01-25 18:10:18 - com.zaxxer.hikari.pool.HikariPool - INFO - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5882de70
+2026-01-25 18:10:18 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-1 - Start completed.
+2026-01-25 18:10:18 - org.hibernate.orm.deprecation - WARN - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-25 18:10:18 - o.hibernate.orm.connections.pooling - INFO - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-25 18:10:20 - o.h.e.t.j.p.i.JtaPlatformInitiator - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-25 18:10:21 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-01-25 18:10:22 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-25 18:10:23 - c.k.c.CrossplatformApplication - INFO - Started CrossplatformApplication in 8.145 seconds (process running for 8.72)
+2026-01-25 18:10:34 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:35 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:35 - o.s.api.AbstractOpenApiResource - INFO - Init duration for springdoc-openapi is: 343 ms
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:10:52 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:20:49 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-1 - Shutdown initiated...
+2026-01-25 18:20:49 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-1 - Shutdown completed.
+2026-01-25 18:20:49 - c.k.c.CrossplatformApplication - INFO - Starting CrossplatformApplication v0.1 using Java 21.0.8 with PID 20252 (C:\Users\user\projects\crossplatform\target\classes started by user in C:\Users\user\projects\crossplatform)
+2026-01-25 18:20:49 - c.k.c.CrossplatformApplication - DEBUG - Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-01-25 18:20:49 - c.k.c.CrossplatformApplication - INFO - The following 1 profile is active: "dev"
+2026-01-25 18:20:50 - o.a.catalina.core.StandardService - INFO - Starting service [Tomcat]
+2026-01-25 18:20:50 - o.a.catalina.core.StandardEngine - INFO - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-25 18:20:50 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring embedded WebApplicationContext
+2026-01-25 18:20:50 - o.h.jpa.internal.util.LogHelper - INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-25 18:20:50 - o.h.c.i.RegionFactoryInitiator - INFO - HHH000026: Second-level cache disabled
+2026-01-25 18:20:50 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-2 - Starting...
+2026-01-25 18:20:50 - com.zaxxer.hikari.pool.HikariPool - INFO - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1fafa18b
+2026-01-25 18:20:50 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-2 - Start completed.
+2026-01-25 18:20:50 - org.hibernate.orm.deprecation - WARN - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-25 18:20:50 - o.hibernate.orm.connections.pooling - INFO - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-25 18:20:50 - o.h.e.t.j.p.i.JtaPlatformInitiator - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-25 18:20:51 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-01-25 18:20:51 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-25 18:20:52 - c.k.c.CrossplatformApplication - INFO - Started CrossplatformApplication in 3.037 seconds (process running for 637.997)
+2026-01-25 18:22:11 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-2 - Shutdown initiated...
+2026-01-25 18:22:11 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-2 - Shutdown completed.
+2026-01-25 18:22:11 - c.k.c.CrossplatformApplication - INFO - Starting CrossplatformApplication v0.1 using Java 21.0.8 with PID 20252 (C:\Users\user\projects\crossplatform\target\classes started by user in C:\Users\user\projects\crossplatform)
+2026-01-25 18:22:11 - c.k.c.CrossplatformApplication - DEBUG - Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-01-25 18:22:11 - c.k.c.CrossplatformApplication - INFO - The following 1 profile is active: "dev"
+2026-01-25 18:22:11 - o.a.catalina.core.StandardService - INFO - Starting service [Tomcat]
+2026-01-25 18:22:11 - o.a.catalina.core.StandardEngine - INFO - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-25 18:22:11 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring embedded WebApplicationContext
+2026-01-25 18:22:11 - o.h.jpa.internal.util.LogHelper - INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-25 18:22:11 - o.h.c.i.RegionFactoryInitiator - INFO - HHH000026: Second-level cache disabled
+2026-01-25 18:22:11 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-3 - Starting...
+2026-01-25 18:22:11 - com.zaxxer.hikari.pool.HikariPool - INFO - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@65696618
+2026-01-25 18:22:11 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-3 - Start completed.
+2026-01-25 18:22:11 - org.hibernate.orm.deprecation - WARN - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-25 18:22:11 - o.hibernate.orm.connections.pooling - INFO - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-25 18:22:12 - o.h.e.t.j.p.i.JtaPlatformInitiator - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-25 18:22:13 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-01-25 18:22:13 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-25 18:22:13 - c.k.c.CrossplatformApplication - INFO - Started CrossplatformApplication in 2.84 seconds (process running for 719.548)
+2026-01-25 18:23:45 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-3 - Shutdown initiated...
+2026-01-25 18:23:45 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-3 - Shutdown completed.
+2026-01-25 18:23:45 - c.k.c.CrossplatformApplication - INFO - Starting CrossplatformApplication v0.1 using Java 21.0.8 with PID 20252 (C:\Users\user\projects\crossplatform\target\classes started by user in C:\Users\user\projects\crossplatform)
+2026-01-25 18:23:45 - c.k.c.CrossplatformApplication - DEBUG - Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-01-25 18:23:45 - c.k.c.CrossplatformApplication - INFO - The following 1 profile is active: "dev"
+2026-01-25 18:23:45 - o.a.catalina.core.StandardService - INFO - Starting service [Tomcat]
+2026-01-25 18:23:45 - o.a.catalina.core.StandardEngine - INFO - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-25 18:23:45 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring embedded WebApplicationContext
+2026-01-25 18:23:45 - o.h.jpa.internal.util.LogHelper - INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-25 18:23:45 - o.h.c.i.RegionFactoryInitiator - INFO - HHH000026: Second-level cache disabled
+2026-01-25 18:23:45 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-4 - Starting...
+2026-01-25 18:23:45 - com.zaxxer.hikari.pool.HikariPool - INFO - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@4f0a5a94
+2026-01-25 18:23:45 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-4 - Start completed.
+2026-01-25 18:23:45 - org.hibernate.orm.deprecation - WARN - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-25 18:23:45 - o.hibernate.orm.connections.pooling - INFO - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-25 18:23:46 - o.h.e.t.j.p.i.JtaPlatformInitiator - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-25 18:23:47 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-01-25 18:23:47 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-25 18:23:47 - c.k.c.CrossplatformApplication - INFO - Started CrossplatformApplication in 2.612 seconds (process running for 813.356)
+2026-01-25 18:24:51 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-4 - Shutdown initiated...
+2026-01-25 18:24:51 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-4 - Shutdown completed.
+2026-01-25 18:24:52 - c.k.c.CrossplatformApplication - INFO - Starting CrossplatformApplication v0.1 using Java 21.0.8 with PID 20252 (C:\Users\user\projects\crossplatform\target\classes started by user in C:\Users\user\projects\crossplatform)
+2026-01-25 18:24:52 - c.k.c.CrossplatformApplication - DEBUG - Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-01-25 18:24:52 - c.k.c.CrossplatformApplication - INFO - The following 1 profile is active: "dev"
+2026-01-25 18:24:52 - o.a.catalina.core.StandardService - INFO - Starting service [Tomcat]
+2026-01-25 18:24:52 - o.a.catalina.core.StandardEngine - INFO - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-25 18:24:52 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring embedded WebApplicationContext
+2026-01-25 18:24:52 - o.h.jpa.internal.util.LogHelper - INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-25 18:24:52 - o.h.c.i.RegionFactoryInitiator - INFO - HHH000026: Second-level cache disabled
+2026-01-25 18:24:52 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-5 - Starting...
+2026-01-25 18:24:52 - com.zaxxer.hikari.pool.HikariPool - INFO - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@4c841485
+2026-01-25 18:24:52 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-5 - Start completed.
+2026-01-25 18:24:52 - org.hibernate.orm.deprecation - WARN - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-25 18:24:52 - o.hibernate.orm.connections.pooling - INFO - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-25 18:24:52 - o.h.e.t.j.p.i.JtaPlatformInitiator - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-25 18:24:54 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-01-25 18:24:54 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-25 18:24:54 - c.k.c.CrossplatformApplication - INFO - Started CrossplatformApplication in 2.662 seconds (process running for 880.272)
+2026-01-25 18:27:51 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-5 - Shutdown initiated...
+2026-01-25 18:27:51 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-5 - Shutdown completed.
+2026-01-25 18:27:51 - c.k.c.CrossplatformApplication - INFO - Starting CrossplatformApplication v0.1 using Java 21.0.8 with PID 20252 (C:\Users\user\projects\crossplatform\target\classes started by user in C:\Users\user\projects\crossplatform)
+2026-01-25 18:27:51 - c.k.c.CrossplatformApplication - DEBUG - Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-01-25 18:27:51 - c.k.c.CrossplatformApplication - INFO - The following 1 profile is active: "dev"
+2026-01-25 18:27:51 - o.a.catalina.core.StandardService - INFO - Starting service [Tomcat]
+2026-01-25 18:27:51 - o.a.catalina.core.StandardEngine - INFO - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-25 18:27:51 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring embedded WebApplicationContext
+2026-01-25 18:27:52 - o.h.jpa.internal.util.LogHelper - INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-25 18:27:52 - o.h.c.i.RegionFactoryInitiator - INFO - HHH000026: Second-level cache disabled
+2026-01-25 18:27:52 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-6 - Starting...
+2026-01-25 18:27:52 - com.zaxxer.hikari.pool.HikariPool - INFO - HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@4b4b571d
+2026-01-25 18:27:52 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-6 - Start completed.
+2026-01-25 18:27:52 - org.hibernate.orm.deprecation - WARN - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-25 18:27:52 - o.hibernate.orm.connections.pooling - INFO - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-25 18:27:52 - o.h.e.t.j.p.i.JtaPlatformInitiator - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-25 18:27:53 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-01-25 18:27:53 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-25 18:27:54 - c.k.c.CrossplatformApplication - INFO - Started CrossplatformApplication in 2.952 seconds (process running for 1059.779)
+2026-01-25 18:43:16 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-6 - Shutdown initiated...
+2026-01-25 18:43:16 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-6 - Shutdown completed.
+2026-01-25 18:43:16 - c.k.c.CrossplatformApplication - INFO - Starting CrossplatformApplication v0.1 using Java 21.0.8 with PID 20252 (C:\Users\user\projects\crossplatform\target\classes started by user in C:\Users\user\projects\crossplatform)
+2026-01-25 18:43:16 - c.k.c.CrossplatformApplication - DEBUG - Running with Spring Boot v3.5.10, Spring v6.2.15
+2026-01-25 18:43:16 - c.k.c.CrossplatformApplication - INFO - The following 1 profile is active: "dev"
+2026-01-25 18:43:17 - o.a.catalina.core.StandardService - INFO - Starting service [Tomcat]
+2026-01-25 18:43:17 - o.a.catalina.core.StandardEngine - INFO - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-25 18:43:17 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring embedded WebApplicationContext
+2026-01-25 18:43:17 - o.h.jpa.internal.util.LogHelper - INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-25 18:43:17 - o.h.c.i.RegionFactoryInitiator - INFO - HHH000026: Second-level cache disabled
+2026-01-25 18:43:17 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-7 - Starting...
+2026-01-25 18:43:17 - com.zaxxer.hikari.pool.HikariPool - INFO - HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@64930abd
+2026-01-25 18:43:17 - com.zaxxer.hikari.HikariDataSource - INFO - HikariPool-7 - Start completed.
+2026-01-25 18:43:17 - org.hibernate.orm.deprecation - WARN - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-25 18:43:17 - o.hibernate.orm.connections.pooling - INFO - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-25 18:43:17 - o.h.e.t.j.p.i.JtaPlatformInitiator - INFO - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-25 18:43:18 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-01-25 18:43:19 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-25 18:43:19 - c.k.c.CrossplatformApplication - INFO - Started CrossplatformApplication in 2.809 seconds (process running for 1985.143)
+2026-01-25 18:44:33 - o.a.c.c.C.[Tomcat].[localhost].[/] - INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-25 18:44:33 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Token missing or invalid, continuing without auth
+2026-01-25 18:44:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:44:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:44:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=true
+2026-01-25 18:44:34 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=false
+2026-01-25 18:44:34 - c.k.c.service.AuthenticationService - DEBUG - Token validity for user=admin: accessValid=false, refreshValid=false
+2026-01-25 18:44:34 - c.k.c.service.AuthenticationService - DEBUG - Revoking tokens for user=admin
+2026-01-25 18:44:34 - c.k.c.service.AuthenticationService - DEBUG - Expired token deleted for user=admin
+2026-01-25 18:44:34 - c.k.c.service.AuthenticationService - DEBUG - Expired token deleted for user=admin
+2026-01-25 18:44:35 - c.k.c.service.AuthenticationService - INFO - New access token issued for user=admin
+2026-01-25 18:44:35 - c.k.c.service.AuthenticationService - INFO - New refresh token issued for user=admin
+2026-01-25 18:44:35 - c.k.c.service.AuthenticationService - INFO - User 'admin' successfully authenticated with role=ADMIN
+2026-01-25 18:45:38 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:45:38 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:45:38 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:45:38 - c.k.c.service.AuthenticationService - INFO - Logout initiated for user=admin
+2026-01-25 18:45:38 - c.k.c.service.AuthenticationService - DEBUG - Revoking tokens for user=admin
+2026-01-25 18:45:38 - c.k.c.service.AuthenticationService - DEBUG - Active token disabled for user=admin
+2026-01-25 18:45:38 - c.k.c.service.AuthenticationService - DEBUG - Active token disabled for user=admin
+2026-01-25 18:45:38 - c.k.c.service.AuthenticationService - INFO - User 'admin' logout successfully
+2026-01-25 18:45:47 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Token missing or invalid, continuing without auth
+2026-01-25 18:45:47 - c.k.c.service.AuthenticationService - INFO - Refreshing access token
+2026-01-25 18:45:47 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:45:47 - c.k.c.service.AuthenticationService - WARN - Invalid refresh token used
+2026-01-25 18:45:47 - o.a.c.c.C.[.[.[.[dispatcherServlet] - ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: token is invalid] with root cause
+java.lang.RuntimeException: token is invalid
+	at com.kfu.crossplatform.service.AuthenticationService.refresh(AuthenticationService.java:128) ~[classes/:na]
+	at com.kfu.crossplatform.controller.AuthController.refresh(AuthController.java:33) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.50.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.50.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at com.kfu.crossplatform.jwt.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:46) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.7.jar:6.5.7]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.7.jar:6.5.7]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.7.jar:6.5.7]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.15.jar:6.2.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.50.jar:10.1.50]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+2026-01-25 18:47:11 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Token missing or invalid, continuing without auth
+2026-01-25 18:47:11 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:47:11 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:47:11 - c.k.c.service.AuthenticationService - DEBUG - Token validity for user=nm: accessValid=false, refreshValid=false
+2026-01-25 18:47:11 - c.k.c.service.AuthenticationService - DEBUG - Revoking tokens for user=nm
+2026-01-25 18:47:12 - c.k.c.service.AuthenticationService - DEBUG - Expired token deleted for user=nm
+2026-01-25 18:47:12 - c.k.c.service.AuthenticationService - DEBUG - Active token disabled for user=nm
+2026-01-25 18:47:12 - c.k.c.service.AuthenticationService - INFO - New access token issued for user=nm
+2026-01-25 18:47:12 - c.k.c.service.AuthenticationService - INFO - New refresh token issued for user=nm
+2026-01-25 18:47:12 - c.k.c.service.AuthenticationService - INFO - User 'nm' successfully authenticated with role=USER
+2026-01-25 18:47:21 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:47:21 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:47:21 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:47:21 - c.k.c.service.AuthenticationService - INFO - Logout initiated for user=nm
+2026-01-25 18:47:21 - c.k.c.service.AuthenticationService - DEBUG - Revoking tokens for user=nm
+2026-01-25 18:47:21 - c.k.c.service.AuthenticationService - DEBUG - Active token disabled for user=nm
+2026-01-25 18:47:21 - c.k.c.service.AuthenticationService - DEBUG - Active token disabled for user=nm
+2026-01-25 18:47:21 - c.k.c.service.AuthenticationService - INFO - User 'nm' logout successfully
+2026-01-25 18:47:40 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Token missing or invalid, continuing without auth
+2026-01-25 18:47:40 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:47:40 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:47:40 - c.k.c.service.AuthenticationService - DEBUG - Token validity for user=surv: accessValid=false, refreshValid=false
+2026-01-25 18:47:40 - c.k.c.service.AuthenticationService - DEBUG - Revoking tokens for user=surv
+2026-01-25 18:47:40 - c.k.c.service.AuthenticationService - INFO - New access token issued for user=surv
+2026-01-25 18:47:40 - c.k.c.service.AuthenticationService - INFO - New refresh token issued for user=surv
+2026-01-25 18:47:40 - c.k.c.service.AuthenticationService - INFO - User 'surv' successfully authenticated with role=USER
+2026-01-25 18:47:47 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:47:47 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:47:47 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:47:47 - c.k.c.service.AuthenticationService - INFO - Refreshing access token
+2026-01-25 18:47:47 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:47:47 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:47:47 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:47:47 - c.k.c.service.AuthenticationService - INFO - Access token refreshed for user=surv
+2026-01-25 18:47:54 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:47:54 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:47:54 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true
+2026-01-25 18:47:54 - c.k.c.service.AuthenticationService - INFO - Logout initiated for user=surv
+2026-01-25 18:47:54 - c.k.c.service.AuthenticationService - DEBUG - Revoking tokens for user=surv
+2026-01-25 18:47:54 - c.k.c.service.AuthenticationService - DEBUG - Active token disabled for user=surv
+2026-01-25 18:47:55 - c.k.c.service.AuthenticationService - DEBUG - Active token disabled for user=surv
+2026-01-25 18:47:55 - c.k.c.service.AuthenticationService - DEBUG - Active token disabled for user=surv
+2026-01-25 18:47:55 - c.k.c.service.AuthenticationService - INFO - User 'surv' logout successfully
+2026-01-25 18:49:57 - c.k.crossplatform.jwt.JwtAuthFilter - DEBUG - Token missing or invalid, continuing without auth
+2026-01-25 18:49:58 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:49:58 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token is null
+2026-01-25 18:49:58 - c.k.c.service.AuthenticationService - DEBUG - Token validity for user=admin: accessValid=false, refreshValid=false
+2026-01-25 18:49:58 - c.k.c.service.AuthenticationService - DEBUG - Revoking tokens for user=admin
+2026-01-25 18:49:58 - c.k.c.service.AuthenticationService - DEBUG - Expired token deleted for user=admin
+2026-01-25 18:49:58 - c.k.c.service.AuthenticationService - INFO - New access token issued for user=admin
+2026-01-25 18:49:58 - c.k.c.service.AuthenticationService - INFO - New refresh token issued for user=admin
+2026-01-25 18:49:58 - c.k.c.service.AuthenticationService - INFO - User 'admin' successfully authenticated with role=ADMIN
+2026-01-25 18:52:42 - c.k.c.jwt.JwtTokenProvider - DEBUG - JWT signature valid, checking if disabled
+2026-01-25 18:52:42 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token found in DB, disabled=false
+2026-01-25 18:52:42 - c.k.c.jwt.JwtTokenProvider - DEBUG - Token valid=true

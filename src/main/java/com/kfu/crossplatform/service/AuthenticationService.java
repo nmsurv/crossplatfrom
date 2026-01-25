@@ -1,4 +1,3 @@
-
 package com.kfu.crossplatform.service;
 
 import java.util.Set;
@@ -31,9 +30,11 @@ import com.kfu.crossplatform.domain.User;
 import org.springframework.beans.factory.annotation.Value;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class AuthenticationService {
     public final UserService userService;
     public final TokenRepository tokenRepository;
@@ -41,6 +42,7 @@ public class AuthenticationService {
     public final CookieUtil cookieUtil;
     public final AuthenticationManager authenticationManager;
     public final JwtTokenProvider jwtTokenProvider;
+    public final TelegramService telegramService;
 
     @Value("${jwt.access.duration.seconds}")
     private long accessTokenDurationSecond;
@@ -61,13 +63,16 @@ public class AuthenticationService {
     }
 
     private void revokeAllTokens(User user) {
+        log.debug("Revoking tokens for user={}", user.getUsername());
         Set<Token> tokens = user.getTokens();
         tokens.forEach(token -> {
             if(token.getExpiryDate().isBefore(LocalDateTime.now())) {
                 tokenRepository.delete(token);
+                log.debug("Expired token deleted for user={}", user.getUsername());
             } else if (!token.isDisabled()) {
                 token.setDisabled(true);
                 tokenRepository.save(token);
+                log.debug("Active token disabled for user={}", user.getUsername());
             }
         });
     }
@@ -78,6 +83,10 @@ public class AuthenticationService {
         User user = userService.getUser(request.username());
         boolean accessValid = jwtTokenProvider.isValid(access);
         boolean refreshValid = jwtTokenProvider.isValid(refresh);
+
+        log.debug( "Token validity for user={}: accessValid={}, refreshValid={}",
+            user.getUsername(), accessValid, refreshValid);
+
         HttpHeaders headers = new HttpHeaders();
         revokeAllTokens(user);
 
@@ -87,6 +96,8 @@ public class AuthenticationService {
             newAccess.setUser(user);
             addAccessTokenCookie(headers, newAccess);
             tokenRepository.save(newAccess);
+
+            log.info("New access token issued for user={}", user.getUsername());
         }
         
         if(!refreshValid) {
@@ -94,14 +105,26 @@ public class AuthenticationService {
             newRefresh.setUser(user);
             addRefreshTokenCookie(headers, newRefresh);
             tokenRepository.save(newRefresh);
+
+            log.info("New refresh token issued for user={}", user.getUsername());
         }
         SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        log.info("User '{}' successfully authenticated with role={}",
+            user.getUsername(),user.getRole().getTitle());
+        telegramService.sendMessage(
+            "Пользователь " + user.getUsername() + " вошел в систему!"
+        );
+
         LoginResponse loginResponse = new LoginResponse(true, user.getRole().getTitle());
         return ResponseEntity.ok().headers(headers).body(loginResponse);
     }
 
     public ResponseEntity<LoginResponse> refresh(String refreshToken) {
+        log.info("Refreshing access token");
+
         if(!jwtTokenProvider.isValid(refreshToken)) {
+            log.warn("Invalid refresh token used");
             throw new RuntimeException("token is invalid");
         }
         User user = userService.getUser(jwtTokenProvider.getUsername(refreshToken));
@@ -111,25 +134,41 @@ public class AuthenticationService {
         newAccess.setUser(user);
         tokenRepository.save(newAccess);
         addAccessTokenCookie(headers, newAccess);
+
+        log.info("Access token refreshed for user={}", user.getUsername());
+
         LoginResponse loginResponse = new LoginResponse(true, user.getRole().getTitle());
         return ResponseEntity.ok().headers(headers).body(loginResponse);
     }
     public ResponseEntity<LoginResponse> logout(String access) {
+
+        String username = jwtTokenProvider.getUsername(access);
+        log.info("Logout initiated for user={}", username);
+
         SecurityContextHolder.clearContext();
         User user = userService.getUser(jwtTokenProvider.getUsername(access));
         revokeAllTokens(user);
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.SET_COOKIE, cookieUtil.deleteAccessCookie().toString());
         headers.add(HttpHeaders.SET_COOKIE, cookieUtil.deleteRefreshCookie().toString());
+
+        log.info("User '{}' logout successfully", username);
+        telegramService.sendMessage(
+            "Пользователь " + user.getUsername() + " вышел из системы!"
+        );
         return ResponseEntity.ok().headers(headers).body(new LoginResponse(false,null));
     }
 
     public UserLogged info() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if( auth instanceof AnonymousAuthenticationToken) {
+            log.warn("Attempt to get user info without authentication");
             throw new RuntimeException("No user");
         }
         User user = userService.getUser(auth.getName());
+
+        log.debug("Fetched info for authenticated user={}", user.getUsername());
+
         return UserMapper.userToLoggedDTO(user);
     }
     

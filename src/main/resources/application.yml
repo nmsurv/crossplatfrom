@@ -40,5 +40,18 @@ jwt:
 logging:
   level:
     root: INFO
-    org.springframework.web: DEBUG
-    com.kfu.crossplatform: DEBUG
+    com.kfu.crossplatform: DEBUG 
+    org.springframework: WARN         
+    org.hibernate: INFO
+  file:
+    name: logs/crossplatform.log      
+    max-size: 10MB                     
+    max-history: 30                     
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %cyan(%logger{36}) - %level - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %level - %msg%n"
+
+telegram:
+  bot:
+    token: "8517155444:AAHbXkiILkubCmx9fhDlI-JFQu3SufH6QyU"
+    chat-id: "1083065069"
