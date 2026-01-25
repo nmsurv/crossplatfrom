@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,6 +23,7 @@ public class SensorController {
     private final SensorService sensorService;
 
     @GetMapping("/sensors")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public List<SensorDTO> getAllSensors(
         @RequestParam(defaultValue = "0") int page,
         @RequestParam(defaultValue = "10") int size) {
@@ -36,6 +38,7 @@ public class SensorController {
         }
     
     @GetMapping("/sensors/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public ResponseEntity<SensorDTO> getSensorById(@PathVariable Long id) {
         return sensorService.getById(id)
             .map(sensor -> ResponseEntity.ok(new SensorDTO(
@@ -47,6 +50,7 @@ public class SensorController {
             .orElse(ResponseEntity.notFound().build());
     }
     
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping("/sensors")
     public ResponseEntity<SensorDTO> createSensor(@Valid @RequestBody CreateSensorRequest request) {
         Sensor created = sensorService.create(request);
@@ -57,6 +61,7 @@ public class SensorController {
             created.getAssingnedTo().getUsername()
         ));
     }
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     
     @PutMapping("/sensors/{id}")
     public ResponseEntity<SensorDTO> updateSensor(@Valid @PathVariable Long id, @RequestBody UpdateSensorRequest request){
@@ -69,7 +74,8 @@ public class SensorController {
             )))
             .orElse(ResponseEntity.notFound().build());
     }
-
+@PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    
     @DeleteMapping("/sensors/{id}")
     public ResponseEntity<Void> deleteSensor(@PathVariable Long id){
         boolean deleted = sensorService.deleteById(id);
